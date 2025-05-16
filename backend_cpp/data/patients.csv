@@ -1,0 +1,6 @@
+id,name,age,gender,urgency,contagion_risk,special_needs,priority_score,seat_number
+0067,mohit,23,Male,Low,Low,Yes,0,0
+23,mohita,23,Female,High,Low,Yes,0,1
+230,mihir,23,Male,High,High,No,0,3
+2301,mihira,79,Female,High,Low,No,0,5
+2302,mihira,45,Female,Low,Low,Yes,0,6

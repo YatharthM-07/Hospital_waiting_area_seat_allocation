@@ -1,25 +1,25 @@
 #ifndef PATIENT_H
 #define PATIENT_H
 
-#include <iostream>
-#include <vector>
 #include <string>
 
-// Struct to represent a patient
-struct Patient {
+class Patient {
+public:
+    std::string id;
+    std::string name;
     int age;
     std::string gender;
-    int urgency;
-    int contagionRisk;
-    bool specialNeeds;
+    std::string urgency;
+    std::string contagion_risk;
+    std::string special_needs;
+    double priority_score;
+    int seat_number;
 
-    bool operator<(const Patient& other) const;  // For sorting in priority queue
+    Patient(std::string id, std::string name, int age, std::string gender,
+            std::string urgency, std::string contagion_risk,
+            std::string special_needs);
+
+    void calculate_priority();
 };
 
-// Function declarations
-std::vector<Patient> readCSV(const std::string& filename);
-void sortPatients(std::vector<Patient>& patients);
-void allocateSeats(const std::vector<Patient>& patients);
-void heapBasedSeatAllocation(std::vector<Patient>& patients);
-
-#endif
+#endif // PATIENT_H
